@@ -2,3 +2,25 @@
 ---
 
 @import "main";
+
+.overview {
+
+    @extend .media, .text-center, .mx-auto, .d-block;
+    height: 90vh;
+    width: 100%;
+    background-color: #000;
+    background-image: url("/assets/images/simple-codelines.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+}
+
+.overview__avatar {
+    
+    @extend .img-thumbnail;
+    width: 20%;
+    border-radius: 50%;
+    margin: 5%;
+
+}

@@ -1,3 +1,9 @@
-url: "http://juniorvitoramisch.com" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+url: http://junioramisch.com # the base hostname & protocol for your site, e.g. http://example.com
+
+baseurldev: "localhost:4000" # the subpath of your site, e.g. /blog
+
+title: Junior Vitor Ramisch - Computer Science Student # the name of your site, e.g. ACME Corp.
+
+description: Technical degree by IFC Concordia and Computer Science Undergraduate by Federal University of Fronteira Sul, has some skills in Web development, novice in computer vision
+
+avatar: https://avatars2.githubusercontent.com/u/19571204?s=400&u=39ac504de6b92527dfff611c6df9252f2320603e&v=4
