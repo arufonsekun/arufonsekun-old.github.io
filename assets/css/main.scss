@@ -3,24 +3,52 @@
 
 @import "main";
 
-.overview {
+.main {
 
-    @extend .media, .text-center, .mx-auto, .d-block;
-    height: 90vh;
-    width: 100%;
+    @extend .container-fluid;
+    height: 100vh;
     background-color: #000;
-    background-image: url("/assets/images/simple-codelines.svg");
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("/assets/images/simple-codelines.svg");
+
+}
+
+.main__actions {
+    
+    @extend .row, .justify-content-center, .mt-5;
+
+}
+
+.action {
+    
+    @extend .p-3;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+.action:hover {
+
+    color:$white;
+    text-decoration: none;
+    background-color: #ffffff0f;
+    border: #ffffff1f 0.05px solid;
+
+}
+
+.overview {
+    
+    @extend .text-center;
     color: white;
 
 }
 
 .overview__avatar {
     
-    @extend .img-thumbnail;
     width: 20%;
     border-radius: 50%;
-    margin: 5%;
+    margin-top: 5%;
 
 }
