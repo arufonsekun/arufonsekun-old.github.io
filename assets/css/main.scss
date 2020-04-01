@@ -3,6 +3,13 @@
 
 @import "main";
 
+%section {
+
+    height: 85vh;
+    color:white;
+
+}
+
 .main {
 
     @extend .container-fluid;
@@ -33,16 +40,13 @@
 
     color:$white;
     text-decoration: none;
-    background-color: #ffffff0f;
-    border: #ffffff1f 0.05px solid;
-
+    
 }
 
 .overview {
     
-    @extend .text-center;
-    color: white;
-
+    @extend %section, .container, .text-center;
+    
 }
 
 .overview__avatar {
@@ -50,5 +54,47 @@
     width: 20%;
     border-radius: 50%;
     margin-top: 5%;
+    
+}
+
+.highlighter {
+    
+    top: -15px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    background-color: #ffffff0f;
+    border: #ffffff1f 0.05px solid;
+
+}
+
+.projects {
+
+    @extend %section, .container-fluid, .text-left;
+
+}
+
+.hide {
+    
+    display: none;
+    opacity: 0;
+
+}
+
+@keyframes fade-text {
+    
+    0%   {opacity: 0.2;}
+    25%  {opacity: 0.4;}
+    50%  {opacity: 0.6;}
+    75%  {opacity: 0.8;}
+    100% {opacity: 1.0 !important;}
+
+}
+
+.fade-text {
+
+    display: block;
+    animation-name: fade-text;
+    animation-duration: 0.5s;
 
 }
