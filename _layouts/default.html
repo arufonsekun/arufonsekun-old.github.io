@@ -6,7 +6,17 @@
 	  	<meta charset="utf-8">
 	  	<title>{{ site.title }}</title>
 	  	<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  	</head>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162510735-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-162510735-1');
+        </script>
+
+    </head>
 
   	<body>
 	  	<main class="main">
