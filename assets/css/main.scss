@@ -74,6 +74,10 @@
 
 }
 
+.about {
+    @extend %section, .container-fluid, .text-left;
+}
+
 .hide {
     
     display: none;
