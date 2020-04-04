@@ -1,60 +1,16 @@
----
----
-
-@import "main";
-
-%section {
-
-    height: 85vh;
-    color:white;
-
-}
-
 .main {
-
+    
     @extend .container-fluid;
+    color: $primary !important;
+    background: $backgroundColor;
+    color: $bodyColor;
+    font-family: $bodyFont;
     height: 100vh;
     background-color: #000;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-image: url("/assets/images/simple-codelines.svg");
 
-}
-
-.main__actions {
-    
-    @extend .row, .justify-content-center, .mt-5;
-
-}
-
-.action {
-    
-    @extend .p-3;
-    color: white;
-    font-weight: 600;
-    letter-spacing: 1px;
-
-}
-
-.action:hover {
-
-    color:$white;
-    text-decoration: none;
-    
-}
-
-.overview {
-    
-    @extend %section, .container, .text-center;
-    
-}
-
-.overview__avatar {
-    
-    width: 20%;
-    border-radius: 50%;
-    margin-top: 5%;
-    
 }
 
 .highlighter {
@@ -66,16 +22,6 @@
     background-color: #ffffff0f;
     border: #ffffff1f 0.05px solid;
 
-}
-
-.projects {
-
-    @extend %section, .container-fluid, .text-left;
-
-}
-
-.about {
-    @extend %section, .container-fluid, .text-left;
 }
 
 .hide {

@@ -1,0 +1,19 @@
+.main__actions {
+    
+    @extend .row, .justify-content-center, .mt-5;
+
+}
+
+.action {
+    
+    @extend .p-3;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+}
+
+.action:hover {
+
+    text-decoration: none;
+    
+}
