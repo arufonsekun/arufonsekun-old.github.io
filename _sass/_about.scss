@@ -3,3 +3,26 @@
     @extend %section, .container-fluid, .text-left;
 
 }
+
+.about__education {
+    
+    @extend .mt-4;
+    
+}
+
+.about-education__info {
+
+    @extend .mt-2, .d-flex;
+
+}
+
+.about-education__description {
+    
+    @extend .d-block;
+}
+
+.decoration-none:hover {
+
+    @extend %decoration-none;
+
+}
