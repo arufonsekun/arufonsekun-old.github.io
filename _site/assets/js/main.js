@@ -98,8 +98,8 @@ var initialize = function(){
 
     }
 
-    let utils = Utils();
-    let mainPage = MainPage();
+    const utils = Utils();
+    const mainPage = MainPage();
 
     mainPage.init();
     

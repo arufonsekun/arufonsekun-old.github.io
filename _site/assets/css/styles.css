@@ -1906,7 +1906,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus { b
 
 .d-inline-block { display: inline-block !important; }
 
-.d-block, .about-education__description { display: block !important; }
+.d-block, .education__description, .professional__description { display: block !important; }
 
 .d-table { display: table !important; }
 
@@ -1914,7 +1914,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus { b
 
 .d-table-cell { display: table-cell !important; }
 
-.d-flex, .about-education__info { display: flex !important; }
+.d-flex, .education__info, .professional__info { display: flex !important; }
 
 .d-inline-flex { display: inline-flex !important; }
 
@@ -2244,7 +2244,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus { b
 
 .m-2 { margin: 0.5rem !important; }
 
-.mt-2, .about-education__info, .my-2 { margin-top: 0.5rem !important; }
+.mt-2, .education__info, .professional__info, .my-2 { margin-top: 0.5rem !important; }
 
 .mr-2, .mx-2 { margin-right: 0.5rem !important; }
 
@@ -2264,7 +2264,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus { b
 
 .m-4 { margin: 1.5rem !important; }
 
-.mt-4, .about__education, .my-4 { margin-top: 1.5rem !important; }
+.mt-4, .about.__education, .my-4 { margin-top: 1.5rem !important; }
 
 .mr-4, .mx-4 { margin-right: 1.5rem !important; }
 

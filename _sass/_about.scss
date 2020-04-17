@@ -1,24 +1,29 @@
+$innerBlocks: education, professional;
+
 .about {
     
     @extend %section, .container-fluid, .text-left;
 
+    &.__education {
+        
+        @extend .mt-4;
+        
+    }
 }
 
-.about__education {
+@each $block in $innerBlocks { 
+    .#{$block} {
     
-    @extend .mt-4;
+        &__info {
+            
+            @extend .mt-2, .d-flex;
     
-}
-
-.about-education__info {
-
-    @extend .mt-2, .d-flex;
-
-}
-
-.about-education__description {
-    
-    @extend .d-block;
+        }
+        &__description {
+            
+            @extend .d-block;
+        }
+    }
 }
 
 .decoration-none:hover {
