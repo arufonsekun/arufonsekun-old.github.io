@@ -1,8 +1,8 @@
-url: http://junioramisch.com # the base hostname & protocol for your site, e.g. http://example.com
+url: http://arufonsekun.github.io
 
-baseurldev: "localhost:4000" # the subpath of your site, e.g. /blog
+baseurldev: "localhost:4000"
 
-title: Junior Vitor Ramisch - Computer Science Student # the name of your site, e.g. ACME Corp.
+title: Junior Vitor Ramisch - Computer Science Student
 
 overview: My name is Junior Vitor Ramisch, I'm a Computer Science Undergraduate from Federal University of Fronteira Sul - UFFS Chapecó. The things that I enjoy the most from computer science is Web Development, Computer Vision and Machine Learning. 
 
