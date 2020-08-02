@@ -1,11 +1,27 @@
 url: http://arufonsekun.github.io
 
-baseurldev: "localhost:4000"
+baseurldev: localhost:4000
 
 title: Junior Vitor Ramisch - Computer Science Student
 
-overview: My name is Junior Vitor Ramisch, I'm a Computer Science Undergraduate from Federal University of Fronteira Sul - UFFS Chapecó. The things that I enjoy the most from computer science is Web Development, Computer Vision and Machine Learning. 
+overview_en: My name is Junior Vitor Ramisch, I'm a Computer
+             Science Undergraduate from Federal University
+             of Fronteira Sul - UFFS Chapecó. The things that
+             I enjoy the most from computer science is Web Development, 
+             Computer Vision and Machine Learning. 
+
+overview_pt: Meu nome é Junior Vitor Ramisch, sou estudande do Curso de
+             Ciência da Computação Campus Chapecó. Gosto assistir de anime, 
+             ver memes, jogar Minecraft, ouvir nerdcast, rock/metal e eventualmente
+             alguns J-POPs. Minha comida preferida é CupNoodles de churrasco,
+             se dormir fosse um esporte seria o meu preferido, odeio barulho.
+             Gosto de contribuir com projetos open-source, meu grande sonho é
+             fazer um cosplay de Naruto.
 
 githubdescription: Technical degree by IFC Concordia and Computer Science Undergraduate by Federal University of Fronteira Sul, has some skills in Web development, novice in computer vision.
 
-avatar: https://avatars2.githubusercontent.com/u/19571204?s=400&u=39ac504de6b92527dfff611c6df9252f2320603e&v=4
+github_avatar: https://avatars2.githubusercontent.com/u/19571204?s=400&u=39ac504de6b92527dfff611c6df9252f2320603e&v=4
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-gist

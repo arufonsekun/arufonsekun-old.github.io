@@ -1,0 +1,10 @@
+@each $type in $spacing_types {
+    @each $pos in $position{
+        @each $space in $spaces {
+            $i: index($spaces, $space)-1;
+            .#{nth($type, 1)}#{nth($pos, 1)}-#{$i}{
+                #{nth($type, 2)}-#{nth($pos, 2)}: #{$space};
+            }
+        }
+    }
+}

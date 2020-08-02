@@ -105,4 +105,4 @@ var initialize = function(){
     
 }
 
-window.onload(initialize());
+window.onload = initialize();
