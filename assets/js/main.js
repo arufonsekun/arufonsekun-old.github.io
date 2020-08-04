@@ -1,49 +1,54 @@
-var initialize = function(){
-    
-    let Utils = function(selector){
+class Utils { 
 
-        this.node = document.querySelectorAll(selector) || document.querySelector(selector);
-
-        let addClass = (elementClass) => {
-            let element = getElement(elementClass);
-            
-            if(element)
-                element.classList.add(newClass);
-            
-            console.log("The given class does not exists");
-            return null;
+    class = function(className) {
+        if (className) {
+            this.forEach(node => {
+                node.classList.add(className);
+            });
+            return;
         }
-
-        let removeClass = (elementClass) => {
-            let element = getElement(elementClass);
-            element.classList.remove(oldClass);
-        }
-
-        return {
-            addClass: (elementClass, newClass) => addClass(elementClass, newClass),
-            removeClass: (elementClass, newClass) => removeClass(elementClass, newClass),
-            getElement: (elementDescriptor) => getElement(elementDescriptor),
-            getElements: (elementDescriptor) => getElements(elementDescriptor)
-        }
+        let classList = null;
+        this.forEach(node => {
+            classList = node.className.split(' ');
+        });
+        return classList;
     }
 
-    let MainPage = function() {
+    removeClass = function(className) {
+        this.forEach((node) => {
+            node.classList.remove(className);
+        });
+    }
 
-        let init = () => {
+    click = function(callBack){
+        this.forEach((node) => {
+            node.onclick = callBack;
+        });
+    }
 
-        }
+    constructor(){ 
         
-        return {
-            init: () => init()
-        }
+        NodeList.prototype.class = this.class;
+        NodeList.prototype.removeClass = this.removeClass;
+        NodeList.prototype.click = this.click;
 
+        return (selector) => {
+            return document.querySelectorAll(selector);
+        } 
+    } 
+}
+
+var initialize = function(){
+
+    const $ = new Utils();
+
+    var highlightActions = function(e){
+        var clickedNode = e.target;
+        $('.highlighted').removeClass('highlighted');
+        clickedNode.classList.add('highlighted');
     }
 
-    const utils = Utils();
-    const mainPage = MainPage();
-
-    mainPage.init();
-    
+    $('.action').click(highlightActions);
 }
 
 window.onload = initialize();
