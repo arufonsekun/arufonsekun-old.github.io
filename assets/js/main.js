@@ -1,16 +1,10 @@
 var initialize = function(){
     
-    let Utils = function(){
+    let Utils = function(selector){
 
-        let getElement = (elementDescriptor) => {
-            return document.querySelector(elementDescriptor);
-        }
+        this.node = document.querySelectorAll(selector) || document.querySelector(selector);
 
-        let getElements = (className) => {
-            return document.querySelectorAll(className);
-        }
-
-        let addClass = (elementClass, newClass) => {
+        let addClass = (elementClass) => {
             let element = getElement(elementClass);
             
             if(element)
@@ -20,7 +14,7 @@ var initialize = function(){
             return null;
         }
 
-        let removeClass = (elementClass, oldClass) => {
+        let removeClass = (elementClass) => {
             let element = getElement(elementClass);
             element.classList.remove(oldClass);
         }
@@ -35,61 +29,8 @@ var initialize = function(){
 
     let MainPage = function() {
 
-        let highlighter = utils.getElement(".highlighter");
-        let currentSectionClass = ".overview";
-
-        let highlightAction = (event) => {
-            
-            let highlighted = event.toElement ? event.toElement : event;
-
-            let highlightedWidth = highlighted.offsetWidth;
-            let highlightedHeight = highlighted.offsetHeight;
-
-            let highlightedTop = highlighted.offsetTop;
-            let highlightedLeft = highlighted.offsetLeft;
-            let highlighterLeft = highlighter.offsetLeft;
-
-            highlighter.style.width = highlightedWidth + "px";
-            highlighter.style.height = highlightedHeight + "px";
-            
-            highlighter.style.top = highlightedTop + "px";
-            highlighter.style.left = highlightedLeft + "px";
-
-        }
-
-        let toggleSection = (event) => {
-
-            let action = event.toElement;
-            let sectionClass = action.innerText;
-
-            let selectedSection = '.' + sectionClass.toLowerCase();
-
-            utils.addClass(currentSectionClass, "hide");
-            utils.removeClass(currentSectionClass, "fade-text");
-            utils.removeClass(selectedSection, "hide");
-            utils.addClass(selectedSection, "fade-text");
-
-            currentSectionClass = selectedSection;
-
-        }
-
-        let addHoverListener = () => {
-            
-            let actions = utils.getElements('.action');
-
-            for (action of actions) {
-                action.addEventListener('click', highlightAction);
-                action.addEventListener('click', toggleSection);
-            }
-        }
-
         let init = () => {
 
-            let highlighted = utils.getElement(".highlighted");
-
-            highlightAction(highlighted);
-            addHoverListener();
-        
         }
         
         return {

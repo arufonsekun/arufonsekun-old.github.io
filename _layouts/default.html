@@ -26,18 +26,15 @@
     </head>
 
   	<body>
-	  	<main class="main">
+	  	<main class="container">
 		
-			{% include overview.html %}
-
-			{% include about.html %}
+			<div class="content">
+				{% include overview.html %}
+			</div>
 			
-			{% include projects.html %}
-			
-			{% include experience.html %}
-			
-			{% include actions.html %}
-
+			<div class="actions">
+				{% include actions.html %}
+			</div>
 			
 		</main>
 		{% include footer.html %}
