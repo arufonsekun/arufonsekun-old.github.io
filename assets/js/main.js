@@ -22,7 +22,7 @@ class Utils {
 
     click = function(callBack){
         this.forEach((node) => {
-            node.onclick = callBack;
+            node.addEventListener('click', callBack);
         });
     }
 
@@ -43,12 +43,24 @@ var initialize = function(){
     const $ = new Utils();
 
     var highlightActions = function(e){
-        var clickedNode = e.target;
+        var action = e.target;
         $('.highlighted').removeClass('highlighted');
-        clickedNode.classList.add('highlighted');
+        action.classList.add('highlighted');
+    }
+
+    
+    var displayTargetContent = function(e) {
+        var action = e.target;
+        var target = action.dataset.target;
+        var targetClass = '.content__' + target;
+        $('.active').class('content--none');
+        $('.active').removeClass('active');
+        $(targetClass).removeClass('content--none');
+        $(targetClass).class('active');
     }
 
     $('.action').click(highlightActions);
+    $('.action').click(displayTargetContent);
 }
 
 window.onload = initialize();
