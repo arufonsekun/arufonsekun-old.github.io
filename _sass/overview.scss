@@ -1,14 +1,10 @@
-.content__overview {
-    height: inherit;
-    padding: 7rem 26rem 0rem 26rem;
-}
-
 .overview{
     &__card {
-        height: inherit;
-        background-color: #4a4e52;
+        color: black;
+        width: 50%;
+        background-color: white;
         border-top-right-radius: 2rem;
-        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
         border: #ffffff1f 0.05px solid;
         display: flex;
         flex-direction: column;
@@ -19,18 +15,5 @@
         width: 11rem;
         border-radius: 8rem;
         margin-top: -4rem;
-    }
-}
-
-.card {
-    &__body {
-        text-align: center;
-        font-size: 1.1rem;
-        font-weight: 600;
-        padding: 2rem 1.2rem 1.2rem 1.2rem;
-
-        &--m0 {
-            margin: 0 !important;
-        }
     }
 }
