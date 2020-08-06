@@ -1,108 +1,66 @@
-var initialize = function(){
-    
-    let Utils = function(){
+class Utils { 
 
-        let getElement = (elementDescriptor) => {
-            return document.querySelector(elementDescriptor);
+    class = function(className) {
+        if (className) {
+            this.forEach(node => {
+                node.classList.add(className);
+            });
+            return;
         }
-
-        let getElements = (className) => {
-            return document.querySelectorAll(className);
-        }
-
-        let addClass = (elementClass, newClass) => {
-            let element = getElement(elementClass);
-            
-            if(element)
-                element.classList.add(newClass);
-            
-            console.log("The given class does not exists");
-            return null;
-        }
-
-        let removeClass = (elementClass, oldClass) => {
-            let element = getElement(elementClass);
-            element.classList.remove(oldClass);
-        }
-
-        return {
-            addClass: (elementClass, newClass) => addClass(elementClass, newClass),
-            removeClass: (elementClass, newClass) => removeClass(elementClass, newClass),
-            getElement: (elementDescriptor) => getElement(elementDescriptor),
-            getElements: (elementDescriptor) => getElements(elementDescriptor)
-        }
+        let classList = null;
+        this.forEach(node => {
+            classList = node.className.split(' ');
+        });
+        return classList;
     }
 
-    let MainPage = function() {
-
-        let highlighter = utils.getElement(".highlighter");
-        let currentSectionClass = ".overview";
-
-        let highlightAction = (event) => {
-            
-            let highlighted = event.toElement ? event.toElement : event;
-
-            let highlightedWidth = highlighted.offsetWidth;
-            let highlightedHeight = highlighted.offsetHeight;
-
-            let highlightedTop = highlighted.offsetTop;
-            let highlightedLeft = highlighted.offsetLeft;
-            let highlighterLeft = highlighter.offsetLeft;
-
-            highlighter.style.width = highlightedWidth + "px";
-            highlighter.style.height = highlightedHeight + "px";
-            
-            highlighter.style.top = highlightedTop + "px";
-            highlighter.style.left = highlightedLeft + "px";
-
-        }
-
-        let toggleSection = (event) => {
-
-            let action = event.toElement;
-            let sectionClass = action.innerText;
-
-            let selectedSection = '.' + sectionClass.toLowerCase();
-
-            utils.addClass(currentSectionClass, "hide");
-            utils.removeClass(currentSectionClass, "fade-text");
-            utils.removeClass(selectedSection, "hide");
-            utils.addClass(selectedSection, "fade-text");
-
-            currentSectionClass = selectedSection;
-
-        }
-
-        let addHoverListener = () => {
-            
-            let actions = utils.getElements('.action');
-
-            for (action of actions) {
-                action.addEventListener('click', highlightAction);
-                action.addEventListener('click', toggleSection);
-            }
-        }
-
-        let init = () => {
-
-            let highlighted = utils.getElement(".highlighted");
-
-            highlightAction(highlighted);
-            addHoverListener();
-        
-        }
-        
-        return {
-            init: () => init()
-        }
-
+    removeClass = function(className) {
+        this.forEach((node) => {
+            node.classList.remove(className);
+        });
     }
 
-    const utils = Utils();
-    const mainPage = MainPage();
+    click = function(callBack){
+        this.forEach((node) => {
+            node.addEventListener('click', callBack);
+        });
+    }
 
-    mainPage.init();
-    
+    constructor(){ 
+        
+        NodeList.prototype.class = this.class;
+        NodeList.prototype.removeClass = this.removeClass;
+        NodeList.prototype.click = this.click;
+
+        return (selector) => {
+            return document.querySelectorAll(selector);
+        } 
+    } 
 }
 
-window.onload(initialize());
+var initialize = function(){
+
+    const $ = new Utils();
+
+    var highlightActions = function(e){
+        var action = e.target;
+        $('.highlighted').removeClass('highlighted');
+        action.classList.add('highlighted');
+    }
+
+    
+    var displayTargetContent = function(e) {
+        var action = e.target;
+        var target = action.dataset.target;
+        var targetClass = '.content__' + target;
+        $('.active').class('content--none');
+        $('.active').removeClass('active');
+        $(targetClass).removeClass('content--none');
+        $(targetClass).class('active');
+    }
+
+    $('.action').click(highlightActions);
+    $('.action').click(displayTargetContent);
+}
+
+window.onload = initialize();

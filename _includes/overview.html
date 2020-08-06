@@ -1,13 +1,15 @@
-<section class="overview">
-    
-    <img class = "overview__avatar mt-5" src="{{ site.avatar }}" alt="Junior Vitor Ramisch">
-    
-    <div class="row justify-content-center mt-4">
-        <div class="col-sm-6">
-            <p class="mt-5">
-                {{ site.overview }}
+<div class="content__overview active">
+    <div class="overview__card">
+        <div class="card__media">
+            <img src="{{ "/assets/images/trash.jpeg" | relative_url }}"
+                class="overview__avatar" alt="Junior Vitor Ramisch"
+            >
+        </div>
+
+        <div class="card__body">
+            <p>
+                {{ site.overview_pt }}
             </p>
         </div>
     </div>
-
-</section>
+</div>

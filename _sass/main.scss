@@ -1,17 +1,6 @@
-@import 'bootstrap/bootstrap.scss';
- 
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
-
+@import "variables";
+@import "utilities";
 @import "default";
-
-@import "placeholders";
-
-@import "actions";
-
+@import "action";
 @import "overview";
-
-@import "projects";
-
-@import "about";
-
-@import "experience";
+@import "social";

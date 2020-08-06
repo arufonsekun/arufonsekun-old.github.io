@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    color: white;
+    height: 100vh;
+    font-size: 20px;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/assets/images/simple-codelines.svg");
+}
+
+p {
+    margin: inherit;
+}
+
+.container {
+    height: 100%;
+}
+
+.content {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &--none {
+        display: none !important;
+    }
+}
+
+div[class^='content__'] {
+    display: inherit;
+    justify-content: inherit;
+}
+
+.card {
+    &__body {
+        text-align: justify;
+        font-size: 1.1rem;
+        padding: 2rem 1.2rem 3rem 1.2rem;
+    }
+}

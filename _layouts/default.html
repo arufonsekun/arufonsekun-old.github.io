@@ -26,22 +26,18 @@
     </head>
 
   	<body>
-	  	<main class="main">
+	  	<main class="container">
 		
-			{% include overview.html %}
-
-			{% include about.html %}
+			<div class="content">
+				{% include overview.html %}
+				{% include social.html %}
+			</div>
 			
-			{% include projects.html %}
-			
-			{% include experience.html %}
-			
-			{% include actions.html %}
-
+			<div class="actions">
+				{% include actions.html %}
+			</div>
 			
 		</main>
-		{% include footer.html %}
-
 		<script type="text/javascript" src="{{ "/assets/js/main.js" }}"></script>
 	</body>
 

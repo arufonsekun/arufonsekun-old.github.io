@@ -1,0 +1,18 @@
+.content__social {
+    height: inherit;
+}
+
+
+.social {
+    
+    &__card {
+        display: flex;
+        align-items: center;
+    }
+
+    &__media {
+        @extend .mx-3;
+        height: fit-content;
+    }
+
+}

@@ -1,0 +1,27 @@
+.actions {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
+}
+
+.action {
+    color: inherit;
+    text-decoration: none;
+    @extend .p-3;
+    
+    &:hover {
+        background-color: #020202;
+        cursor: pointer; 
+    }
+}
+
+.highlighted {
+    background-color: #ffffff0f;
+    border: #ffffff1f 0.05px solid;
+
+    &:hover {
+        background-color: #ffffff0f;
+        cursor: auto;
+    }
+}
