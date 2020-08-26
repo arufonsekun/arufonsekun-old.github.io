@@ -1,0 +1,37 @@
+.content__education {
+    width: 100%;
+    height: inherit;
+}
+
+.degree {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__institution {
+        display: flex;
+        align-items: flex-end;
+        font-weight: 600;
+    }
+
+    &__description {
+        font-size: 1rem;
+    }
+}
+
+.education {
+
+    &__card {
+        color: black;
+        width: 50%;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        background-color: white;
+        border: #ffffff1f 0.05px solid;
+
+        &__body {
+            width: 100%;
+        }
+    }
+
+}
+
