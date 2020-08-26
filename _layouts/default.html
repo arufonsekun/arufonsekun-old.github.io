@@ -26,16 +26,17 @@
     </head>
 
   	<body>
-	  	<main class="container">
+	  	<main>
 		
 			<div class="content">
 				{% include overview.html %}
+				{% include projects.html %}
 				{% include social.html %}
 			</div>
 			
-			<div class="actions">
+			<nav class="actions">
 				{% include actions.html %}
-			</div>
+			</nav>
 			
 		</main>
 		<script type="text/javascript" src="{{ "/assets/js/main.js" }}"></script>

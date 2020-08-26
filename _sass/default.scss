@@ -22,8 +22,12 @@ p {
     margin: inherit;
 }
 
-.container {
+main {
     height: 100%;
+}
+
+a {
+    text-decoration: none;
 }
 
 .content {
@@ -37,7 +41,7 @@ p {
     }
 }
 
-div[class^='content__'] {
+section[class^='content__'] {
     display: inherit;
     justify-content: inherit;
 }
@@ -46,6 +50,23 @@ div[class^='content__'] {
     &__body {
         text-align: justify;
         font-size: 1.1rem;
-        padding: 2rem 1.2rem 3rem 1.2rem;
+        padding: 2rem 4.2rem 3rem 4.2rem;
+    }
+}
+
+.badge {
+
+    font-weight: 600;
+    color: white;
+    font-size: 0.7rem;
+    border-radius: 12px;
+    @extend .p-1;
+    
+    &-finished {
+        background-color: green;
+    }
+
+    &-ongoing {
+        background-color: #ffd600;
     }
 }
