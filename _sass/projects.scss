@@ -1,0 +1,47 @@
+.content__projects {
+    width: 100%;
+    height: inherit;
+}
+
+.projects {
+    &__card {
+        color: black;
+        width: 65%;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        background-color: white;
+        border: #ffffff1f 0.05px solid;
+
+        &__body {
+            width: 100%;
+        }
+    }
+
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__thumbnail {
+        display: inherit;
+        align-items: center;
+    }
+
+    &__name {
+        width: 75%;
+        font-weight: 600;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__description {
+        font-size: 1rem;
+        text-align: justify;
+
+        > a {
+            vertical-align: sub;
+            float: right;
+        }
+    }
+}
