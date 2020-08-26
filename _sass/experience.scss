@@ -1,0 +1,14 @@
+.content__experience {
+    width: 100%;
+}
+
+.experience {
+    &__card {
+        color: black;
+        width: 50%;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        background-color: white;
+        border: #ffffff1f 0.05px solid;
+    }
+}
