@@ -4,21 +4,22 @@ baseurldev: localhost:4000
 
 title: Junior Vitor Ramisch - Computer Science Student
 
-overview_en: My name is Junior Vitor Ramisch, I'm a Computer
-             Science Undergraduate from Federal University
-             of Fronteira Sul - UFFS Chapecó. The things that
-             I enjoy the most from computer science is Web Development, 
-             Computer Vision and Machine Learning. 
+overview_en: My name is Junior Vitor Ramisch, I'm a Computer Science
+             Undergraduate from Federal University of Fronteira Sul - Campus Chapeco.
+             I enjoy to watch animes, play Minecraft and League of Legends,
+             listen to Nerdcast, rock/metal and some J-POPs eventualy. My favourite food
+             is barbecue CupNoodles and biluzitos (a brazilian snack) even knowing all
+             of this is slowly killing me. I really like to code open-source projects,
+             It's where a learn very cool stuff. My life goal is to cosplay a Naruto
+             character. 
 
 overview_pt: Meu nome é Junior Vitor Ramisch, sou estudande do Curso de
-             Ciência da Computação do Campus Chapecó. Gosto assistir de anime, 
-             ver memes, jogar Minecraft, ouvir nerdcast, rock/metal e eventualmente
-             alguns J-POPs. Minha comida preferida é CupNoodles de churrasco,
-             e biluzitos de churrasco, se dormir fosse um esporte seria o meu
-             preferido, odeio barulho. Gosto de contribuir com projetos open-source,
-             meu grande sonho é fazer um cosplay de Naruto.
-
-githubdescription: Technical degree by IFC Concordia and Computer Science Undergraduate by Federal University of Fronteira Sul, has some skills in Web development, novice in computer vision.
+             Ciência da Computação do Campus Chapecó. Gosto de assistir anime, 
+             ver memes, jogar Minecraft e LOL, ouvir nerdcast, rock/metal e eventualmente
+             alguns J-POPs. Minha comida preferida é CupNoodles e biluzitos de churrasco.
+             Uma vez eu jogava vôlei, mas hoje meu esporte favorito é dormir.
+             Gosto de contribuir com projetos open-source, meu grande sonho é fazer
+             um cosplay de Naruto e poder voltar pra universidade.
 
 github_avatar: https://avatars2.githubusercontent.com/u/19571204?s=400&u=39ac504de6b92527dfff611c6df9252f2320603e&v=4
 
