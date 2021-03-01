@@ -1,15 +1,20 @@
-name: Build and deploy Jekyll site to GitHub Pages
-
+name: Build and Deploy
 on:
   push:
     branches:
       - master
-
 jobs:
-  github-pages:
-    runs-on: ubuntu-16.04
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: helaili/jekyll-action@2.0.1
-        env:
-          JEKYLL_PAT: ${{ secrets.JEKYLL_PAT }}
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: vuepress-deploy
+      uses: jenkey2011/vuepress-deploy@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.JEKYLL_PAT }}
+        TARGET_REPO: arufonsekun/arufonsekun.github.io
+        TARGET_BRANCH: gh-pages
+        BUILD_SCRIPT: npm install && npm run build
+        BUILD_DIR: ./dist/
